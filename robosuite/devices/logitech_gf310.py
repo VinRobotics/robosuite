@@ -267,7 +267,7 @@ class LogitechGF310(Device):
         print_command("Move RX/RY right joystick", "rotate arm about x/y axis, namely roll/pitch")
         print_command("Press R2 Trigger with or without R1", "rotate arm about z axis, namely yaw")
         print_command("X button", "reset simulation")
-        print_command("B button (hold)", "close gripper")
+        print_command("B button (hold)", "upload data to hugging face")
         print_command("Y button", "toggle arm/base mode (if applicable)")
         print_command("Left/Right Direction Pad", "switch active arm (if multi-armed robot)")
         print_command("Up/Down Direction Pad", "switch active robot (if multi-robot environment)")

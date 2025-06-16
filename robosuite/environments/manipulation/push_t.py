@@ -29,6 +29,7 @@ _OBJECT_POS_OFFSET_FN = {
     "G1FloatingBody": {"peg": _flip_last_dim_fn, "hole": _flip_last_dim_fn},
 }
 
+
 class PushT(ManipulationEnv):
     """
     This class corresponds to the push T task for a single robot arm.
@@ -194,7 +195,7 @@ class PushT(ManipulationEnv):
         camera_segmentations=None,  # {None, instance, class, element}
         renderer="mjviewer",
         renderer_config=None,
-        success_threshold=0.02
+        success_threshold=0.02,
     ):
         # settings for table top
         self.table_full_size = table_full_size
@@ -219,8 +220,8 @@ class PushT(ManipulationEnv):
         self.success_threshold = success_threshold
 
         # fixed goal pose for the T-bar (MuJoCo order = w x y z)
-        self._goal_pos  = np.array([0.19, -0.027, 0.812])
-        self._goal_quat = np.array([0.512, 0., 0., -0.859])
+        self._goal_pos = np.array([0.19, -0.027, 0.812])
+        self._goal_quat = np.array([0.512, 0.0, 0.0, -0.859])
 
         # one 7-D vector so we can L2-norm in one shot
         self._goal_pose = np.concatenate([self._goal_pos, self._goal_quat])
@@ -232,9 +233,9 @@ class PushT(ManipulationEnv):
             base_types="default",
             gripper_types=gripper_types,
             initialization_noise=initialization_noise,
-            use_camera_obs=use_camera_obs,
+            use_camera_obs=True,
             has_renderer=has_renderer,
-            has_offscreen_renderer=has_offscreen_renderer,
+            has_offscreen_renderer=True,
             render_camera=render_camera,
             render_collision_mesh=render_collision_mesh,
             render_visual_mesh=render_visual_mesh,
@@ -306,7 +307,7 @@ class PushT(ManipulationEnv):
                 reference_pos=self.table_offset,
                 z_offset=0.01,
             )
-        
+
         # add long peg to robotic arm
         self.peg = CylinderObject(
             name="peg",
@@ -434,18 +435,16 @@ class PushT(ManipulationEnv):
             bool: True if T bar is in the correct position, False otherwise
         """
         # current pose
-        pos  = self.sim.data.body_xpos[self.t_bar_body_id]          # (3,)
-        quat = self.sim.data.body_xquat[self.t_bar_body_id]         # (4,)  w x y z
+        pos = self.sim.data.body_xpos[self.t_bar_body_id]  # (3,)
+        quat = self.sim.data.body_xquat[self.t_bar_body_id]  # (4,)  w x y z
 
         # deal with quaternion double-covering: pick the sign that is closer
         quat_diff_1 = quat - self._goal_quat
-        quat_diff_2 = quat + self._goal_quat       # same orientation, opposite sign
-        quat_diff   = quat_diff_1 \
-            if np.linalg.norm(quat_diff_1) < np.linalg.norm(quat_diff_2) \
-            else quat_diff_2
+        quat_diff_2 = quat + self._goal_quat  # same orientation, opposite sign
+        quat_diff = quat_diff_1 if np.linalg.norm(quat_diff_1) < np.linalg.norm(quat_diff_2) else quat_diff_2
 
         # stack and compute distance
         pose_diff = np.concatenate([pos - self._goal_pos, quat_diff])
-        dist = np.linalg.norm(pose_diff)           # scalar
+        dist = np.linalg.norm(pose_diff)  # scalar
 
         return dist < self.success_threshold
