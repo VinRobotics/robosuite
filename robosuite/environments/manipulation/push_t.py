@@ -175,7 +175,7 @@ class PushT(ManipulationEnv):
         reward_scale=1.0,
         reward_shaping=False,
         peg_radius=(0.005, 0.01),
-        peg_length=0.15,
+        peg_length=0.2,
         placement_initializer=None,
         has_renderer=False,
         has_offscreen_renderer=True,
@@ -200,7 +200,8 @@ class PushT(ManipulationEnv):
         # settings for table top
         self.table_full_size = table_full_size
         self.table_friction = table_friction
-        self.table_offset = np.array((0, 0, 0.8))
+        # set table offset so that the T movable area is within the arm workspace
+        self.table_offset = np.array((-0.15, 0, 0.8))
 
         # reward configuration
         self.reward_scale = reward_scale
@@ -225,6 +226,10 @@ class PushT(ManipulationEnv):
 
         # one 7-D vector so we can L2-norm in one shot
         self._goal_pose = np.concatenate([self._goal_pos, self._goal_quat])
+
+        self.keypoint_poses = {
+            "home": np.array([0, np.pi / 16.0, 0.00, -np.pi / 2.0 - np.pi / 3.0, 0.00, np.pi - 0.32, np.pi / 4])
+        }
 
         super().__init__(
             robots=robots,
@@ -339,6 +344,20 @@ class PushT(ManipulationEnv):
             mujoco_objects=self.t_bar,
         )
 
+        peg_geoms = find_elements(root=peg_obj, tags="geom")
+        peg_geoms.set("contype", "1")
+        peg_geoms.set("conaffinity", "1")
+
+        t_geoms = find_elements(root=self.t_bar.get_obj(), tags="geom")
+        t_geoms.set("contype", "3")
+        t_geoms.set("conaffinity", "3")
+
+        table_geoms = find_elements(
+            root=self.model.worldbody, tags="geom", attribs={"name": "table_collision"}
+        )
+        table_geoms.set("contype", "2")
+        table_geoms.set("conaffinity", "2")
+
     def _setup_references(self):
         """
         Sets up references to important components. A reference is typically an
@@ -410,6 +429,18 @@ class PushT(ManipulationEnv):
             # Loop through all objects and reset their positions
             for obj_pos, obj_quat, obj in object_placements.values():
                 self.sim.data.set_joint_qpos(obj.joints[0], np.concatenate([np.array(obj_pos), np.array(obj_quat)]))
+        
+        custom_qpos = self.keypoint_poses["home"]
+        # For single arm robot
+        if len(self.robots[0].arms) == 1:
+            self.sim.data.qpos[self.robots[0]._ref_joint_pos_indexes] = custom_qpos
+        
+        # For bimanual robot (like GR1)
+        elif len(self.robots[0].arms) == 2:
+            # Set right arm
+            self.sim.data.qpos[self.robots[0]._ref_joint_pos_indexes[:7]] = custom_qpos[:7]
+            # Set left arm  
+            self.sim.data.qpos[self.robots[0]._ref_joint_pos_indexes[7:14]] = custom_qpos[7:14]
 
     def visualize(self, vis_settings):
         """
