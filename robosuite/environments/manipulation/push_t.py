@@ -169,7 +169,7 @@ class PushT(ManipulationEnv):
         base_types="default",
         initialization_noise="default",
         table_full_size=(0.8, 0.8, 0.05),
-        table_friction=(1.0, 5e-3, 1e-4),
+        table_friction=(0.2, 5e-3, 1e-4),
         use_camera_obs=True,
         use_object_obs=True,
         reward_scale=1.0,
@@ -221,7 +221,7 @@ class PushT(ManipulationEnv):
         self.success_threshold = success_threshold
 
         # fixed goal pose for the T-bar (MuJoCo order = w x y z)
-        self._goal_pos = np.array([0.19, -0.027, 0.812])
+        self._goal_pos = np.array([0.04, -0.027, 0.812])
         self._goal_quat = np.array([0.512, 0.0, 0.0, -0.859])
 
         # one 7-D vector so we can L2-norm in one shot
@@ -304,7 +304,7 @@ class PushT(ManipulationEnv):
             self.placement_initializer = UniformRandomSampler(
                 name="ObjectSampler",
                 mujoco_objects=self.t_bar,
-                x_range=[-0.03, 0.03],
+                x_range=[-0.1, -0.04],
                 y_range=[-0.03, 0.03],
                 rotation=None,
                 ensure_object_boundary_in_range=False,
@@ -344,19 +344,37 @@ class PushT(ManipulationEnv):
             mujoco_objects=self.t_bar,
         )
 
+        # custom params for contact
         peg_geoms = find_elements(root=peg_obj, tags="geom")
         peg_geoms.set("contype", "1")
         peg_geoms.set("conaffinity", "1")
+        peg_geoms.set("solref", "0.002 1")
+        peg_geoms.set("solimp", "0.95 0.99 0.001")
+        peg_geoms.set("condim", "3")
 
-        t_geoms = find_elements(root=self.t_bar.get_obj(), tags="geom")
+        t_geoms = find_elements(root=self.t_bar.get_obj(), tags="geom", attribs={"name": "tbar_g0"})
         t_geoms.set("contype", "3")
         t_geoms.set("conaffinity", "3")
+        t_geoms.set("solref", "0.002 1")
+        t_geoms.set("solimp", "0.95 0.99 0.001")
+        t_geoms.set("condim", "3")
+        t_geoms.set("friction", "0.4 0.001 0.0001")
+        t_geoms = find_elements(root=self.t_bar.get_obj(), tags="geom", attribs={"name": "tbar_g1"})
+        t_geoms.set("contype", "3")
+        t_geoms.set("conaffinity", "3")
+        t_geoms.set("solref", "0.002 1")
+        t_geoms.set("solimp", "0.95 0.99 0.001")
+        t_geoms.set("condim", "3")
+        t_geoms.set("friction", "0.4 0.001 0.0001")
 
         table_geoms = find_elements(
             root=self.model.worldbody, tags="geom", attribs={"name": "table_collision"}
         )
         table_geoms.set("contype", "2")
         table_geoms.set("conaffinity", "2")
+        table_geoms.set("solref", "0.002 1")
+        table_geoms.set("solimp", "0.95 0.99 0.001")
+        table_geoms.set("condim", "3")
 
     def _setup_references(self):
         """
