@@ -1,4 +1,3 @@
-<?xml version="1.0" ?>
 <mujoco model="sawyer">
   <compiler angle="radian"/>
   <actuator>
@@ -11,12 +10,10 @@
     <motor ctrllimited="true" ctrlrange="-9.0 9.0" joint="right_j6" name="torq_right_j6"/>
   </actuator>
   <asset>
-    <!-- base material and mesh -->
     <material name="Mtl1.017" specular="0.5" shininess="0.225" rgba="1.000000 0.000000 0.000000 1.000000"/>
     <material name="Mtl2.017" specular="0.5" shininess="0.225" rgba="0.286275 0.286275 0.286275 1.000000"/>
     <mesh name="base_0" file="obj_meshes/base/base_0.obj"/>
     <mesh name="base_1" file="obj_meshes/base/base_1.obj"/>
-    <!-- head material and mesh -->
     <material name="Mtl1" specular="0.5" shininess="0.225" rgba="1.000000 0.000000 0.000000 1.000000"/>
     <material name="Mtl2" specular="0.5" shininess="0.225" rgba="0.000000 0.000000 0.000000 1.000000"/>
     <material name="Mtl4" specular="0.5" shininess="0.225" rgba="1.000000 1.000000 1.000000 1.000000"/>
@@ -37,7 +34,6 @@
     <mesh name="head_7" file="obj_meshes/head/head_7.obj"/>
     <mesh name="head_8" file="obj_meshes/head/head_8.obj"/>
     <mesh name="head_9" file="obj_meshes/head/head_9.obj"/>
-    <!-- l0 material and mesh -->
     <material name="Mtl1.014" specular="0.5" shininess="0.225" rgba="0.286275 0.286275 0.286275 1.000000"/>
     <material name="Mtl2.014" specular="0.5" shininess="0.225" rgba="1.000000 1.000000 1.000000 1.000000"/>
     <material name="Mtl3.013" specular="0.5" shininess="0.225" rgba="0.168627 0.152941 0.141176 1.000000"/>
@@ -52,14 +48,12 @@
     <mesh name="l0_4" file="obj_meshes/l0/l0_4.obj"/>
     <mesh name="l0_5" file="obj_meshes/l0/l0_5.obj"/>
     <mesh name="l0_6" file="obj_meshes/l0/l0_6.obj"/>
-    <!-- l1 material and mesh -->
     <material name="Mtl1.004" specular="0.5" shininess="0.225" rgba="1.000000 1.000000 1.000000 1.000000"/>
     <material name="Mtl2.004" specular="0.5" shininess="0.225" rgba="1.000000 0.000000 0.000000 1.000000"/>
     <material name="Mtl3.003" specular="0.5" shininess="0.225" rgba="0.286275 0.286275 0.286275 1.000000"/>
     <mesh name="l1_0" file="obj_meshes/l1/l1_0.obj"/>
     <mesh name="l1_1" file="obj_meshes/l1/l1_1.obj"/>
     <mesh name="l1_2" file="obj_meshes/l1/l1_2.obj"/>
-    <!-- l2 material and mesh -->
     <material name="Mtl1.005" specular="0.5" shininess="0.225" rgba="1.000000 0.000000 0.000000 1.000000"/>
     <material name="Mtl2.005" specular="0.5" shininess="0.225" rgba="0.286275 0.286275 0.286275 1.000000"/>
     <material name="Mtl3.004" specular="0.5" shininess="0.225" rgba="1.000000 1.000000 1.000000 1.000000"/>
@@ -70,7 +64,6 @@
     <mesh name="l2_2" file="obj_meshes/l2/l2_2.obj"/>
     <mesh name="l2_3" file="obj_meshes/l2/l2_3.obj"/>
     <mesh name="l2_4" file="obj_meshes/l2/l2_4.obj"/>
-    <!-- l3 material and mesh -->
     <material name="Mtl1.007" specular="0.5" shininess="0.225" rgba="0.290196 0.290196 0.290196 1.000000"/>
     <material name="Mtl2.007" specular="0.5" shininess="0.225" rgba="1.000000 1.000000 1.000000 1.000000"/>
     <material name="Mtl3.006" specular="0.5" shininess="0.225" rgba="1.000000 0.000000 0.000000 1.000000"/>
@@ -79,7 +72,6 @@
     <mesh name="l3_1" file="obj_meshes/l3/l3_1.obj"/>
     <mesh name="l3_2" file="obj_meshes/l3/l3_2.obj"/>
     <mesh name="l3_3" file="obj_meshes/l3/l3_3.obj"/>
-    <!-- l4 material and mesh -->
     <material name="Mtl1.010" specular="0.5" shininess="0.225" rgba="0.286275 0.286275 0.286275 1.000000"/>
     <material name="Mtl2.010" specular="0.5" shininess="0.225" rgba="1.000000 0.000000 0.000000 1.000000"/>
     <material name="Mtl3.009" specular="0.5" shininess="0.225" rgba="0.000000 0.000000 0.000000 1.000000"/>
@@ -96,7 +88,6 @@
     <mesh name="l4_5" file="obj_meshes/l4/l4_5.obj"/>
     <mesh name="l4_6" file="obj_meshes/l4/l4_6.obj"/>
     <mesh name="l4_7" file="obj_meshes/l4/l4_7.obj"/>
-    <!-- l5 material and mesh -->
     <material name="Mtl1_001" specular="0.5" shininess="0.225" rgba="1.000000 0.000000 0.000000 1.000000"/>
     <material name="Mtl2_001" specular="0.5" shininess="0.225" rgba="1.000000 1.000000 1.000000 1.000000"/>
     <material name="Mtl3_001" specular="0.5" shininess="0.225" rgba="0.286275 0.286275 0.286275 1.000000"/>
@@ -107,7 +98,6 @@
     <mesh name="l5_2" file="obj_meshes/l5/l5_2.obj"/>
     <mesh name="l5_3" file="obj_meshes/l5/l5_3.obj"/>
     <mesh name="l5_4" file="obj_meshes/l5/l5_4.obj"/>
-    <!-- l6 material and mesh -->
     <material name="Mtl1.012" specular="0.5" shininess="0.225" rgba="0.298039 0.298039 0.298039 1.000000"/>
     <material name="Mtl2.012" specular="0.5" shininess="0.225" rgba="0.282353 0.282353 0.282353 1.000000"/>
     <material name="Mtl3.011" specular="0.5" shininess="0.225" rgba="0.286275 0.286275 0.286275 1.000000"/>
@@ -123,41 +113,37 @@
   </asset>
   <worldbody>
     <body name="base" pos="0 0 0">
-      <!-- robot view -->
       <camera mode="fixed" name="robotview" pos="1.0 0 0.4" quat="0.653 0.271 0.271 0.653"/>
       <inertial diaginertia="0 0 0" mass="0" pos="0 0 0"/>
-      <!-- mount attached here -->
       <body name="right_arm_base_link" pos="0 0 0">
         <site name="right_center" pos="0 0 0" size="0.01" rgba="1 0.3 0.3 1" group="2"/>
         <inertial diaginertia="0.00740351 0.00681776 0.00672942" mass="2.0687" pos="-0.0006241 -2.8025e-05 0.065404" quat="-0.209285 0.674441 0.227335 0.670558"/>
-        <geom mesh="base_0" material="Mtl2.017" type="mesh" contype="0" conaffinity="0" group="1"/>
-        <geom mesh="base_1" material="Mtl1.017" type="mesh" contype="0" conaffinity="0" group="1"/>
-        <geom pos="0 0 0.12" rgba="0.5 0.1 0.1 1" size="0.08 0.12" type="cylinder" name="base_col"/>
+        <geom material="Mtl2.017" type="capsule" contype="0" conaffinity="0" group="1" pos="-0.074964 0.000362 0.040178" quat="0.866815 0.498572 0.007575 0.000000" size="0.021228 0.029211" rgba="0.2 0.2 0.8 0.5"/>
+        <geom material="Mtl1.017" type="capsule" contype="0" conaffinity="0" group="1" pos="0.002292 -0.000188 0.026955" quat="0.730752 -0.509409 -0.454427 0.000000" size="0.057459 0.047659" rgba="0.2 0.2 0.8 0.5"/>
+        <geom pos="0 0 0.12" rgba="0.5 0.1 0.1 1" size="0.08 0.039999999999999994" type="capsule" name="base_col"/>
         <body name="right_l0" pos="0 0 0.08">
           <inertial diaginertia="0.0651588 0.0510944 0.0186218" mass="5.3213" pos="0.024366 0.010969 0.14363" quat="0.894823 0.00899958 -0.170275 0.412573"/>
           <joint axis="0 0 1" limited="true" name="right_j0" pos="0 0 0" range="-3.0503 3.0503"/>
-          <geom mesh="l0_0" material="Mtl7.007" type="mesh" contype="0" conaffinity="0" group="1"/>
-          <geom mesh="l0_1" material="Mtl6.008" type="mesh" contype="0" conaffinity="0" group="1"/>
-          <geom mesh="l0_2" material="Mtl5.010" type="mesh" contype="0" conaffinity="0" group="1"/>
-          <geom mesh="l0_3" material="Mtl4.012" type="mesh" contype="0" conaffinity="0" group="1"/>
-          <geom mesh="l0_4" material="Mtl3.013" type="mesh" contype="0" conaffinity="0" group="1"/>
-          <geom mesh="l0_5" material="Mtl2.014" type="mesh" contype="0" conaffinity="0" group="1"/>
-          <geom mesh="l0_6" material="Mtl1.014" type="mesh" contype="0" conaffinity="0" group="1"/>
+          <geom material="Mtl7.007" type="capsule" contype="0" conaffinity="0" group="1" pos="-0.041595 0.015507 0.217845" quat="0.997673 -0.039366 0.055668 0.000000" size="0.000184 0.003706" rgba="0.2 0.2 0.8 0.5"/>
+          <geom material="Mtl6.008" type="capsule" contype="0" conaffinity="0" group="1" pos="0.050096 -0.078800 0.173989" quat="0.521352 -0.144829 0.840962 0.000000" size="0.001334 0.014329" rgba="0.2 0.2 0.8 0.5"/>
+          <geom material="Mtl5.010" type="capsule" contype="0" conaffinity="0" group="1" pos="0.015932 -0.004016 0.163913" quat="0.939086 -0.033183 0.342077 0.000000" size="0.071415 0.097391" rgba="0.2 0.2 0.8 0.5"/>
+          <geom material="Mtl4.012" type="capsule" contype="0" conaffinity="0" group="1" pos="-0.064426 -0.018033 0.053969" quat="0.998935 -0.011245 0.044739 0.000000" size="0.001031 0.003216" rgba="0.2 0.2 0.8 0.5"/>
+          <geom material="Mtl3.013" type="capsule" contype="0" conaffinity="0" group="1" pos="-0.065956 0.018788 0.041213" quat="0.987730 -0.140363 0.068474 0.000000" size="0.005650 0.003586" rgba="0.2 0.2 0.8 0.5"/>
+          <geom material="Mtl2.014" type="capsule" contype="0" conaffinity="0" group="1" pos="0.009864 0.014754 0.135509" quat="0.268949 -0.232096 0.934771 0.000000" size="0.032026 0.111435" rgba="0.2 0.2 0.8 0.5"/>
+          <geom material="Mtl1.014" type="capsule" contype="0" conaffinity="0" group="1" pos="0.024413 -0.030056 0.152095" quat="0.970621 0.060176 0.232969 0.000000" size="0.077918 0.078814" rgba="0.2 0.2 0.8 0.5"/>
           <geom pos="0.08 0 0.23" rgba="0.5 0.1 0.1 1" size="0.07" name="link0_collision"/>
           <body name="head" pos="0 0 0.2965">
             <inertial diaginertia="0.0118334 0.00827089 0.00496574" mass="1.5795" pos="0.0053207 -2.6549e-05 0.1021" quat="0.999993 7.08405e-05 -0.00359857 -0.000626247"/>
-            <!--Don't want to control the head joint so remove it from the kinematic tree-->
-            <!--<joint axis="0 0 1" limited="true" name="head_pan" pos="0 0 0" range="-5.0952 0.9064"/>-->
-            <geom mesh="head_0" material="Mtlb" type="mesh" contype="0" conaffinity="0" group="1"/>
-            <geom mesh="head_1" material="Mtla" type="mesh" contype="0" conaffinity="0" group="1"/>
-            <geom mesh="head_2" material="Mtl8" type="mesh" contype="0" conaffinity="0" group="1"/>
-            <geom mesh="head_3" material="Mtl9" type="mesh" contype="0" conaffinity="0" group="1"/>
-            <geom mesh="head_4" material="Mtl7" type="mesh" contype="0" conaffinity="0" group="1"/>
-            <geom mesh="head_5" material="Mtl6" type="mesh" contype="0" conaffinity="0" group="1"/>
-            <geom mesh="head_6" material="Mtl4" type="mesh" contype="0" conaffinity="0" group="1"/>
-            <geom mesh="head_7" material="Mtl2" type="mesh" contype="0" conaffinity="0" group="1"/>
-            <geom mesh="head_8" material="Mtl1" type="mesh" contype="0" conaffinity="0" group="1"/>
-            <geom mesh="head_9" material="Mtl5" type="mesh" contype="0" conaffinity="0" group="1"/>
+            <geom material="Mtlb" type="capsule" contype="0" conaffinity="0" group="1" pos="0.000075 0.000044 0.000769" quat="0.707099 -0.355666 0.611156 0.000000" size="0.024064 0.013793" rgba="0.2 0.2 0.8 0.5"/>
+            <geom material="Mtla" type="capsule" contype="0" conaffinity="0" group="1" pos="0.000088 -0.000187 0.002750" quat="0.707107 -0.504297 0.495665 0.000000" size="0.023624 0.013594" rgba="0.2 0.2 0.8 0.5"/>
+            <geom material="Mtl8" type="capsule" contype="0" conaffinity="0" group="1" pos="0.010383 0.022863 0.074991" quat="0.945220 0.320344 0.062764 0.000000" size="0.023618 0.046662" rgba="0.2 0.2 0.8 0.5"/>
+            <geom material="Mtl9" type="capsule" contype="0" conaffinity="0" group="1" pos="0.013363 0.002365 0.102330" quat="0.952665 -0.304011 0.002536 0.000000" size="0.026793 0.052666" rgba="0.2 0.2 0.8 0.5"/>
+            <geom material="Mtl7" type="capsule" contype="0" conaffinity="0" group="1" pos="0.002769 -0.009884 0.222500" quat="0.707107 0.190729 -0.680898 0.000000" size="0.025605 0.014942" rgba="0.2 0.2 0.8 0.5"/>
+            <geom material="Mtl6" type="capsule" contype="0" conaffinity="0" group="1" pos="-0.008676 0.000004 0.112418" quat="0.014873 0.080589 0.996636 0.000000" size="0.040269 0.070713" rgba="0.2 0.2 0.8 0.5"/>
+            <geom material="Mtl4" type="capsule" contype="0" conaffinity="0" group="1" pos="0.025139 -0.010273 0.110114" quat="0.363587 0.918222 0.157076 0.000000" size="0.083851 0.056663" rgba="0.2 0.2 0.8 0.5"/>
+            <geom material="Mtl2" type="capsule" contype="0" conaffinity="0" group="1" pos="0.028529 0.000068 0.101051" quat="0.949819 0.312800 -0.000191 0.000000" size="0.063602 0.070639" rgba="0.2 0.2 0.8 0.5"/>
+            <geom material="Mtl1" type="capsule" contype="0" conaffinity="0" group="1" pos="0.012021 0.014812 0.079544" quat="0.469943 0.881962 -0.035998 0.000000" size="0.063444 0.082800" rgba="0.2 0.2 0.8 0.5"/>
+            <geom material="Mtl5" type="capsule" contype="0" conaffinity="0" group="1" pos="0.028531 -0.054830 0.102643" quat="0.935588 -0.353094 -0.000311 0.000000" size="0.000216 0.085889" rgba="0.2 0.2 0.8 0.5"/>
             <geom pos="0 0 0.08" rgba="0.5 0.1 0.1 1" size="0.018" name="head_collision"/>
             <body name="screen" pos="0.03 0 0.105" quat="0.5 0.5 0.5 0.5">
               <inertial diaginertia="1e-08 1e-08 1e-08" mass="0.0001" pos="0 0 0"/>
@@ -173,50 +159,50 @@
           <body name="right_l1" pos="0.081 0.05 0.237" quat="0.5 -0.5 0.5 0.5">
             <inertial diaginertia="0.0224339 0.0221624 0.0097097" mass="4.505" pos="-0.0030849 -0.026811 0.092521" quat="0.424888 0.891987 0.132364 -0.0794296"/>
             <joint axis="0 0 1" limited="true" name="right_j1" pos="0 0 0" range="-3.8095 2.2736"/>
-            <geom mesh="l1_0" material="Mtl3.003" type="mesh" contype="0" conaffinity="0" group="1"/>
-            <geom mesh="l1_1" material="Mtl2.004" type="mesh" contype="0" conaffinity="0" group="1"/>
-            <geom mesh="l1_2" material="Mtl1.004" type="mesh" contype="0" conaffinity="0" group="1"/>
+            <geom material="Mtl3.003" type="capsule" contype="0" conaffinity="0" group="1" pos="0.001417 0.011048 0.150493" quat="0.529913 -0.586543 -0.612503 0.000000" size="0.042096 0.037639" rgba="0.2 0.2 0.8 0.5"/>
+            <geom material="Mtl2.004" type="capsule" contype="0" conaffinity="0" group="1" pos="0.000425 -0.023921 0.099896" quat="0.851409 0.410632 -0.326318 0.000000" size="0.060774 0.055462" rgba="0.2 0.2 0.8 0.5"/>
+            <geom material="Mtl1.004" type="capsule" contype="0" conaffinity="0" group="1" pos="0.000003 -0.063377 0.071492" quat="0.927012 0.375032 -0.000393 0.000000" size="0.048576 0.093436" rgba="0.2 0.2 0.8 0.5"/>
             <geom pos="0 0 0.1225" rgba="0.5 0.1 0.1 1" size="0.07" name="link1_collision"/>
             <body name="right_l2" pos="0 -0.14 0.1425" quat="0.707107 0.707107 0 0">
               <inertial diaginertia="0.0257928 0.025506 0.00292515" mass="1.745" pos="-0.00016044 -0.014967 0.13582" quat="0.707831 -0.0524761 0.0516007 0.702537"/>
               <joint axis="0 0 1" limited="true" name="right_j2" pos="0 0 0" range="-3.0426 3.0426"/>
-              <geom mesh="l2_0" material="Mtl4.003" type="mesh" contype="0" conaffinity="0" group="1"/>
-              <geom mesh="l2_1" material="Mtl5.003" type="mesh" contype="0" conaffinity="0" group="1"/>
-              <geom mesh="l2_2" material="Mtl3.004" type="mesh" contype="0" conaffinity="0" group="1"/>
-              <geom mesh="l2_3" material="Mtl2.005" type="mesh" contype="0" conaffinity="0" group="1"/>
-              <geom mesh="l2_4" material="Mtl1.005" type="mesh" contype="0" conaffinity="0" group="1"/>
-              <geom pos="0 0 0.08" rgba="0.5 0.1 0.1 1" size="0.06 0.17" type="cylinder" name="link2_collision"/>
+              <geom material="Mtl4.003" type="capsule" contype="0" conaffinity="0" group="1" pos="0.000648 0.008260 0.244411" quat="0.908672 0.137277 0.394297 0.000000" size="0.031990 0.023912" rgba="0.2 0.2 0.8 0.5"/>
+              <geom material="Mtl5.003" type="capsule" contype="0" conaffinity="0" group="1" pos="-0.007253 0.009870 0.240611" quat="0.371561 -0.393894 0.840708 0.000000" size="0.031961 0.025623" rgba="0.2 0.2 0.8 0.5"/>
+              <geom material="Mtl3.004" type="capsule" contype="0" conaffinity="0" group="1" pos="0.000124 -0.023835 0.151465" quat="0.075902 -0.996592 -0.032314 0.000000" size="0.037261 0.123057" rgba="0.2 0.2 0.8 0.5"/>
+              <geom material="Mtl2.005" type="capsule" contype="0" conaffinity="0" group="1" pos="0.001322 0.020139 0.253469" quat="0.934894 0.155525 -0.319037 0.000000" size="0.034558 0.028066" rgba="0.2 0.2 0.8 0.5"/>
+              <geom material="Mtl1.005" type="capsule" contype="0" conaffinity="0" group="1" pos="0.000298 -0.007835 0.153915" quat="0.090454 -0.994467 -0.053416 0.000000" size="0.042944 0.118371" rgba="0.2 0.2 0.8 0.5"/>
+              <geom pos="0 0 0.08" rgba="0.5 0.1 0.1 1" size="0.06 0.11000000000000001" type="capsule" name="link2_collision"/>
               <body name="right_l3" pos="0 -0.042 0.26" quat="0.707107 -0.707107 0 0">
                 <inertial diaginertia="0.0102404 0.0096997 0.00369622" mass="2.5097" pos="-0.0048135 -0.0281 -0.084154" quat="0.902999 0.385391 -0.0880901 0.168247"/>
                 <joint axis="0 0 1" limited="true" name="right_j3" pos="0 0 0" range="-3.0439 3.0439"/>
-                <geom mesh="l3_0" material="Mtl4.005" type="mesh" contype="0" conaffinity="0" group="1"/>
-                <geom mesh="l3_1" material="Mtl3.006" type="mesh" contype="0" conaffinity="0" group="1"/>
-                <geom mesh="l3_2" material="Mtl2.007" type="mesh" contype="0" conaffinity="0" group="1"/>
-                <geom mesh="l3_3" material="Mtl1.007" type="mesh" contype="0" conaffinity="0" group="1"/>
+                <geom material="Mtl4.005" type="capsule" contype="0" conaffinity="0" group="1" pos="0.000100 0.047727 -0.067210" quat="0.703083 0.008975 0.711051 0.000000" size="0.003112 0.025464" rgba="0.2 0.2 0.8 0.5"/>
+                <geom material="Mtl3.006" type="capsule" contype="0" conaffinity="0" group="1" pos="-0.000884 -0.032188 -0.081478" quat="0.464086 0.723949 -0.510413 0.000000" size="0.047571 0.056454" rgba="0.2 0.2 0.8 0.5"/>
+                <geom material="Mtl2.007" type="capsule" contype="0" conaffinity="0" group="1" pos="0.000007 -0.058316 -0.065685" quat="0.365813 0.930688 -0.000698 0.000000" size="0.039028 0.084163" rgba="0.2 0.2 0.8 0.5"/>
+                <geom material="Mtl1.007" type="capsule" contype="0" conaffinity="0" group="1" pos="-0.000535 0.014533 -0.133137" quat="0.886215 -0.333608 0.321447 0.000000" size="0.044518 0.026580" rgba="0.2 0.2 0.8 0.5"/>
                 <geom pos="0 -0.01 -0.12" rgba="0.5 0.1 0.1 1" size="0.06" name="link3_collision"/>
                 <body name="right_l4" pos="0 -0.125 -0.1265" quat="0.707107 0.707107 0 0">
                   <inertial diaginertia="0.0136549 0.0135493 0.00127353" mass="1.1136" pos="-0.0018844 0.0069001 0.1341" quat="0.803612 0.031257 -0.0298334 0.593582"/>
                   <joint axis="0 0 1" limited="true" name="right_j4" pos="0 0 0" range="-2.9761 2.9761"/>
-                  <geom mesh="l4_0" material="Mtl8.002" type="mesh" contype="0" conaffinity="0" group="1"/>
-                  <geom mesh="l4_1" material="Mtl7.004" type="mesh" contype="0" conaffinity="0" group="1"/>
-                  <geom mesh="l4_2" material="Mtl6.004" type="mesh" contype="0" conaffinity="0" group="1"/>
-                  <geom mesh="l4_3" material="Mtl5.006" type="mesh" contype="0" conaffinity="0" group="1"/>
-                  <geom mesh="l4_4" material="Mtl4.008" type="mesh" contype="0" conaffinity="0" group="1"/>
-                  <geom mesh="l4_5" material="Mtl3.009" type="mesh" contype="0" conaffinity="0" group="1"/>
-                  <geom mesh="l4_6" material="Mtl2.010" type="mesh" contype="0" conaffinity="0" group="1"/>
-                  <geom mesh="l4_7" material="Mtl1.010" type="mesh" contype="0" conaffinity="0" group="1"/>
-                  <geom pos="0 0 0.11" rgba="0.5 0.1 0.1 1" size="0.045 0.15" type="cylinder" name="link4_collision"/>
+                  <geom material="Mtl8.002" type="capsule" contype="0" conaffinity="0" group="1" pos="-0.040901 -0.000547 0.079003" quat="0.005072 -0.980532 -0.196294 0.000000" size="0.005534 0.010319" rgba="0.2 0.2 0.8 0.5"/>
+                  <geom material="Mtl7.004" type="capsule" contype="0" conaffinity="0" group="1" pos="-0.038452 0.004332 0.085721" quat="0.037171 0.808926 -0.586734 0.000000" size="0.011626 0.028996" rgba="0.2 0.2 0.8 0.5"/>
+                  <geom material="Mtl6.004" type="capsule" contype="0" conaffinity="0" group="1" pos="-0.038227 -0.000312 0.082905" quat="0.999915 0.011130 0.006745 0.000000" size="0.011511 0.042948" rgba="0.2 0.2 0.8 0.5"/>
+                  <geom material="Mtl5.006" type="capsule" contype="0" conaffinity="0" group="1" pos="-0.042797 0.000111 0.082994" quat="0.999993 0.002983 0.002413 0.000000" size="0.012504 0.041952" rgba="0.2 0.2 0.8 0.5"/>
+                  <geom material="Mtl4.008" type="capsule" contype="0" conaffinity="0" group="1" pos="-0.037939 -0.000618 0.083092" quat="0.999918 0.010208 0.007706 0.000000" size="0.011482 0.047051" rgba="0.2 0.2 0.8 0.5"/>
+                  <geom material="Mtl3.009" type="capsule" contype="0" conaffinity="0" group="1" pos="-0.014866 -0.002163 0.164334" quat="0.997258 -0.003463 0.073927 0.000000" size="0.024690 0.131761" rgba="0.2 0.2 0.8 0.5"/>
+                  <geom material="Mtl2.010" type="capsule" contype="0" conaffinity="0" group="1" pos="0.001138 0.010124 0.156150" quat="0.056941 0.949616 -0.308200 0.000000" size="0.035748 0.127605" rgba="0.2 0.2 0.8 0.5"/>
+                  <geom material="Mtl1.010" type="capsule" contype="0" conaffinity="0" group="1" pos="0.010758 -0.004055 0.151916" quat="0.983101 0.014774 0.182468 0.000000" size="0.035718 0.118914" rgba="0.2 0.2 0.8 0.5"/>
+                  <geom pos="0 0 0.11" rgba="0.5 0.1 0.1 1" size="0.045 0.105" type="capsule" name="link4_collision"/>
                   <body name="right_arm_itb" pos="-0.055 0 0.075" quat="0.707107 0 -0.707107 0">
                     <inertial diaginertia="1e-08 1e-08 1e-08" mass="0.0001" pos="0 0 0"/>
                   </body>
                   <body name="right_l5" pos="0 0.031 0.275" quat="0.707107 -0.707107 0 0">
                     <inertial diaginertia="0.00474131 0.00422857 0.00190672" mass="1.5625" pos="0.0061133 -0.023697 0.076416" quat="0.404076 0.9135 0.0473125 0.00158335"/>
                     <joint axis="0 0 1" limited="true" name="right_j5" pos="0 0 0" range="-2.9761 2.9761" damping="0.2"/>
-                    <geom mesh="l5_0" material="Mtl5_001" type="mesh" contype="0" conaffinity="0" group="1"/>
-                    <geom mesh="l5_1" material="Mtl4_001" type="mesh" contype="0" conaffinity="0" group="1"/>
-                    <geom mesh="l5_2" material="Mtl2_001" type="mesh" contype="0" conaffinity="0" group="1"/>
-                    <geom mesh="l5_3" material="Mtl1_001" type="mesh" contype="0" conaffinity="0" group="1"/>
-                    <geom mesh="l5_4" material="Mtl3_001" type="mesh" contype="0" conaffinity="0" group="1"/>
+                    <geom material="Mtl5_001" type="capsule" contype="0" conaffinity="0" group="1" pos="0.045314 -0.036965 0.080112" quat="0.893519 -0.449023 0.001457 0.000000" size="0.007378 0.008226" rgba="0.2 0.2 0.8 0.5"/>
+                    <geom material="Mtl4_001" type="capsule" contype="0" conaffinity="0" group="1" pos="-0.002685 -0.003767 0.009800" quat="0.706463 0.416384 0.572306 0.000000" size="0.025973 0.014476" rgba="0.2 0.2 0.8 0.5"/>
+                    <geom material="Mtl2_001" type="capsule" contype="0" conaffinity="0" group="1" pos="0.021258 -0.015494 0.033912" quat="0.940217 0.201421 0.274630 0.000000" size="0.015578 0.049910" rgba="0.2 0.2 0.8 0.5"/>
+                    <geom material="Mtl1_001" type="capsule" contype="0" conaffinity="0" group="1" pos="-0.000840 -0.020848 0.069193" quat="0.825626 0.555318 -0.099818 0.000000" size="0.047048 0.033229" rgba="0.2 0.2 0.8 0.5"/>
+                    <geom material="Mtl3_001" type="capsule" contype="0" conaffinity="0" group="1" pos="0.007827 0.002132 0.123670" quat="0.657560 -0.577335 -0.484045 0.000000" size="0.040831 0.015612" rgba="0.2 0.2 0.8 0.5"/>
                     <geom pos="0 0 0.1" rgba="0.5 0.1 0.1 1" size="0.06" name="link5_collision"/>
                     <body name="right_hand_camera" pos="0.039552 -0.033 0.0695" quat="0.707107 0 0.707107 0">
                       <inertial diaginertia="0 0 0" mass="0" pos="0.039552 -0.033 0.0695" quat="0.707107 0 0.707107 0"/>
@@ -227,17 +213,15 @@
                     <body name="right_l6" pos="0 -0.11 0.1053" quat="0.0616248 0.06163 -0.704416 0.704416">
                       <inertial diaginertia="0.000360258 0.000311068 0.000214974" mass="0.3292" pos="-8.0726e-06 0.0085838 -0.0049566" quat="0.479044 0.515636 -0.513069 0.491322"/>
                       <joint axis="0 0 1" limited="true" name="right_j6" pos="0 0 0" range="-4.7124 4.7124" damping="0.1"/>
-                      <geom mesh="l6_0" material="Mtl6.006" type="mesh" contype="0" conaffinity="0" group="1"/>
-                      <geom mesh="l6_1" material="Mtl5.008" type="mesh" contype="0" conaffinity="0" group="1"/>
-                      <geom mesh="l6_2" material="Mtl4.010" type="mesh" contype="0" conaffinity="0" group="1"/>
-                      <geom mesh="l6_3" material="Mtl3.011" type="mesh" contype="0" conaffinity="0" group="1"/>
-                      <geom mesh="l6_4" material="Mtl2.012" type="mesh" contype="0" conaffinity="0" group="1"/>
-                      <geom mesh="l6_5" material="Mtl1.012" type="mesh" contype="0" conaffinity="0" group="1"/>
-                      <geom pos="0 0.015 -0.01" rgba="0.5 0.1 0.1 1" size="0.055 0.025" type="cylinder" name="link6_collision"/>
+                      <geom material="Mtl6.006" type="capsule" contype="0" conaffinity="0" group="1" pos="-0.003310 0.066661 0.000382" quat="0.021534 -0.922168 0.386189 0.000000" size="0.001603 0.004778" rgba="0.2 0.2 0.8 0.5"/>
+                      <geom material="Mtl5.008" type="capsule" contype="0" conaffinity="0" group="1" pos="0.000001 0.066135 0.000601" quat="0.365523 -0.036718 0.930078 0.000000" size="0.006590 0.004796" rgba="0.2 0.2 0.8 0.5"/>
+                      <geom material="Mtl4.010" type="capsule" contype="0" conaffinity="0" group="1" pos="0.003502 0.066633 0.000640" quat="0.285129 0.020326 0.958274 0.000000" size="0.001908 0.004593" rgba="0.2 0.2 0.8 0.5"/>
+                      <geom material="Mtl3.011" type="capsule" contype="0" conaffinity="0" group="1" pos="-0.000000 -0.000000 -0.036475" quat="0.707086 -0.561381 -0.429978 0.000000" size="0.024622 0.015366" rgba="0.2 0.2 0.8 0.5"/>
+                      <geom material="Mtl2.012" type="capsule" contype="0" conaffinity="0" group="1" pos="-0.001604 0.012274 -0.025556" quat="0.697422 -0.591882 -0.404077 0.000000" size="0.028738 0.023632" rgba="0.2 0.2 0.8 0.5"/>
+                      <geom material="Mtl1.012" type="capsule" contype="0" conaffinity="0" group="1" pos="-0.001785 0.012908 -0.004617" quat="0.594018 -0.578059 -0.559455 0.000000" size="0.031337 0.023258" rgba="0.2 0.2 0.8 0.5"/>
+                      <geom pos="0 0.015 -0.01" rgba="0.5 0.1 0.1 1" size="0.055 0.025" type="capsule" name="link6_collision"/>
                       <body name="right_hand" pos="0 0 0.024" quat="0.707105 0 0 0.707108">
-                        <!-- This camera points out from the eef. -->
                         <camera mode="fixed" name="eye_in_hand" pos="0.05 0 0" quat="0 0.707108 0.707108 0" fovy="75"/>
-                        <!-- To add gripper -->
                       </body>
                     </body>
                   </body>
@@ -254,7 +238,7 @@
             </body>
             <body name="right_l1_2" pos="0 0 0">
               <inertial diaginertia="1e-08 1e-08 1e-08" mass="1e-08" pos="1e-08 1e-08 1e-08" quat="0.820473 0.339851 -0.17592 0.424708"/>
-              <geom pos="0 0 0.035" size="0.07 0.07" type="cylinder" name="right_l1_2"/>
+              <geom pos="0 0 0.035" size="0.07 0.07" type="capsule" name="right_l1_2"/>
             </body>
           </body>
         </body>

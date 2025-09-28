@@ -4,11 +4,9 @@
   <visual>
     <global ellipsoidinertia="true"/>
   </visual>
-
-<asset>
+  <asset>
     <material name="BlackAbs" rgba="0.1 0.1 0.1 1"/>
     <material name="wrap" rgba="0.878431 0.666666 0.227450 1"/>
-
     <mesh name="arm_link_sh0" file="meshes/arm_link_sh0.obj"/>
     <mesh name="arm_link_sh1_0" file="meshes/arm_link_sh1_0.obj"/>
     <mesh name="arm_link_sh1_1" file="meshes/arm_link_sh1_1.obj"/>
@@ -27,13 +25,12 @@
     <mesh name="arm_link_el1_lip_coll" file="meshes/arm_link_el1_lip.obj"/>
     <mesh name="arm_link_wr0_coll" file="meshes/arm_link_wr0.obj"/>
   </asset>
-
   <default>
     <default class="spot_arm">
       <geom solref="0.004 1"/>
       <joint actuatorfrcrange="-1000 1000"/>
       <position kp="500" kv="40" inheritrange="1"/>
-      <motor ctrlrange="-33.5 33.5"  ctrllimited="true"/>
+      <motor ctrlrange="-33.5 33.5" ctrllimited="true"/>
     </default>
     <default class="spot_arm_visual">
       <joint actuatorfrcrange="-1000 1000"/>
@@ -41,61 +38,52 @@
       <geom group="1" type="mesh" contype="0" conaffinity="0" solref="0.004 1"/>
     </default>
     <default class="spot_arm_collision">
-        <joint actuatorfrcrange="-1000 1000"/>
-        <position kp="500" kv="40" inheritrange="1"/>
-        <geom group="0" type="mesh" solref="0.004 1"/>
+      <joint actuatorfrcrange="-1000 1000"/>
+      <position kp="500" kv="40" inheritrange="1"/>
+      <geom group="0" type="mesh" solref="0.004 1"/>
     </default>
   </default>
-
   <worldbody>
     <body name="base" pos="0 0 0">
       <body name="arm_link_sh0" pos="0 0 0">
         <site name="right_center" pos="0 0 0" size="0.01" rgba="1 0.3 0.3 1" group="2"/>
-        <inertial pos="-0.0123727 -4.52114e-05 -0.021032" quat="0.707107 0.707107 0 0" mass="2.3364"
-          diaginertia="0.0090143 0.00778748 0.0058351"/>
+        <inertial pos="-0.0123727 -4.52114e-05 -0.021032" quat="0.707107 0.707107 0 0" mass="2.3364" diaginertia="0.0090143 0.00778748 0.0058351"/>
         <joint name="arm_sh0" axis="0 0 1" range="-2.61799 3.14159"/>
-        <geom material="BlackAbs" mesh="arm_link_sh0" class="spot_arm_visual" rgba=".1 .1 .1 1"/>
-        <geom class="spot_arm_collision" mesh="arm_link_sh0_base_coll"/>
-        <geom class="spot_arm_collision" mesh="arm_link_sh0_left_motor_coll"/>
-        <geom class="spot_arm_collision" mesh="arm_link_sh0_right_motor_coll"/>
+        <geom material="BlackAbs" class="spot_arm_visual" rgba="0.2 0.2 0.8 0.5" type="capsule" pos="-0.011821 0.005452 -0.019226" quat="0.627623 0.707951 0.323875 0.000000" size="0.058716 0.050857"/>
+        <geom class="spot_arm_collision" type="capsule" pos="-0.013899 0.001042 -0.070806" quat="0.518994 0.516899 0.680779 0.000000" size="0.041250 0.026800" rgba="0.2 0.2 0.8 0.5"/>
+        <geom class="spot_arm_collision" type="capsule" pos="-0.013390 0.053024 -0.005173" quat="0.469976 -0.290060 0.833660 0.000000" size="0.046700 0.020071" rgba="0.2 0.2 0.8 0.5"/>
+        <geom class="spot_arm_collision" type="capsule" pos="-0.005870 -0.057827 -0.010397" quat="0.481107 -0.221473 0.848225 0.000000" size="0.047277 0.024408" rgba="0.2 0.2 0.8 0.5"/>
         <body name="arm_link_sh1">
-          <inertial pos="2.41764e-05 2.41161e-06 -1.00591e-05" quat="1 1 -1 1" mass="0.2596"
-            diaginertia="0.00020385 0.000202928 0.000170786"/>
+          <inertial pos="2.41764e-05 2.41161e-06 -1.00591e-05" quat="1 1 -1 1" mass="0.2596" diaginertia="0.00020385 0.000202928 0.000170786"/>
           <joint name="arm_sh1" axis="0 1 0" range="-3.14159 0.523599"/>
-          <geom mesh="arm_link_sh1_0" material="wrap" class="spot_arm_visual"/>
-          <geom mesh="arm_link_sh1_1" material="BlackAbs" class="spot_arm_visual"/>
+          <geom material="wrap" class="spot_arm_visual" type="capsule" pos="0.189143 0.000261 -0.021798" quat="0.705025 0.030152 -0.708541 0.000000" size="0.026979 0.089854" rgba="0.2 0.2 0.8 0.5"/>
+          <geom material="BlackAbs" class="spot_arm_visual" type="capsule" pos="0.168913 -0.002070 0.007118" quat="0.701023 -0.039055 -0.712068 0.000000" size="0.026229 0.172902" rgba="0.2 0.2 0.8 0.5"/>
           <body name="arm_link_hr0">
-            <inertial pos="0.17047 -0.0019251 4.48389e-05" quat="0 1 0 1" mass="1e-06"
-              diaginertia="1.16111e-08 1.14871e-08 6.31263e-10"/>
-            <geom class="spot_arm_collision" mesh="arm_link_hr0_coll"/>
+            <inertial pos="0.17047 -0.0019251 4.48389e-05" quat="0 1 0 1" mass="1e-06" diaginertia="1.16111e-08 1.14871e-08 6.31263e-10"/>
+            <geom class="spot_arm_collision" type="capsule" pos="0.169055 -0.002162 0.000078" quat="0.707653 0.014605 0.706409 0.000000" size="0.032635 0.166504" rgba="0.2 0.2 0.8 0.5"/>
             <body name="arm_link_el0" pos="0.3385 0 0">
-              <inertial pos="0.0553741 0.000236034 0.048272" quat="1 1 1 1" mass="0.725"
-                diaginertia="0.00200479 0.00197228 0.000821537"/>
+              <inertial pos="0.0553741 0.000236034 0.048272" quat="1 1 1 1" mass="0.725" diaginertia="0.00200479 0.00197228 0.000821537"/>
               <joint name="arm_el0" axis="0 1 0" range="0 3.14159"/>
-              <geom material="BlackAbs" mesh="arm_link_el0" class="spot_arm_visual"/>
-              <geom mesh="arm_link_el0_coll" class="spot_arm_collision"/>
+              <geom material="BlackAbs" class="spot_arm_visual" type="capsule" pos="0.049505 0.005172 0.049434" quat="0.878509 -0.194351 0.436405 0.000000" size="0.045078 0.058619" rgba="0.2 0.2 0.8 0.5"/>
+              <geom class="spot_arm_collision" type="capsule" pos="0.053511 -0.000455 0.046599" quat="0.838625 -0.271224 0.472382 0.000000" size="0.052496 0.048607" rgba="0.2 0.2 0.8 0.5"/>
               <body name="arm_link_el1" pos="0.4033 0 0.075">
-                <inertial pos="-0.125784 -0.0136845 0.000101579" quat="0 1 0 1" mass="0.725"
-                  diaginertia="0.00451592 0.00440245 0.000625481"/>
+                <inertial pos="-0.125784 -0.0136845 0.000101579" quat="0 1 0 1" mass="0.725" diaginertia="0.00451592 0.00440245 0.000625481"/>
                 <joint name="arm_el1" axis="1 0 0" range="-2.79253 2.79253"/>
-                <geom mesh="arm_link_el1_0" material="wrap" class="spot_arm_visual"/>
-                <geom mesh="arm_link_el1_1" material="BlackAbs" class="spot_arm_visual"/>
-                <geom class="spot_arm_collision" mesh="arm_link_el1_main_coll"/>
-                <geom class="spot_arm_collision" mesh="arm_link_el1_lip_coll"/>
+                <geom material="wrap" class="spot_arm_visual" type="capsule" pos="-0.156192 0.022387 -0.001299" quat="0.703129 -0.009166 -0.711003 0.000000" size="0.029396 0.078777" rgba="0.2 0.2 0.8 0.5"/>
+                <geom material="BlackAbs" class="spot_arm_visual" type="capsule" pos="-0.118156 -0.024876 0.000485" quat="0.709101 -0.129915 -0.693035 0.000000" size="0.022493 0.132307" rgba="0.2 0.2 0.8 0.5"/>
+                <geom class="spot_arm_collision" type="capsule" pos="-0.156714 0.000501 0.000003" quat="0.705765 -0.044817 0.707027 0.000000" size="0.035727 0.073779" rgba="0.2 0.2 0.8 0.5"/>
+                <geom class="spot_arm_collision" type="capsule" pos="-0.000277 -0.058461 -0.000014" quat="0.100095 0.003291 0.994972 0.000000" size="0.022318 0.010954" rgba="0.2 0.2 0.8 0.5"/>
                 <body name="arm_link_wr0">
-                  <inertial pos="0.00821068 -0.012051 3.14348e-05" quat="1 1 -1 1" mass="0.98"
-                    diaginertia="0.00123549 0.000985132 0.000891615"/>
+                  <inertial pos="0.00821068 -0.012051 3.14348e-05" quat="1 1 -1 1" mass="0.98" diaginertia="0.00123549 0.000985132 0.000891615"/>
                   <joint name="arm_wr0" axis="0 1 0" range="-1.8326 1.8326"/>
-                  <geom mesh="arm_link_wr0_0" material="wrap" class="spot_arm_visual"/>
-                  <geom mesh="arm_link_wr0_1" material="BlackAbs" class="spot_arm_visual"/>
-                  <geom class="spot_arm_collision" mesh="arm_link_wr0_coll"/>
+                  <geom material="wrap" class="spot_arm_visual" type="capsule" pos="0.007519 0.031487 -0.001612" quat="0.524579 -0.092520 0.846319 0.000000" size="0.021071 0.031326" rgba="0.2 0.2 0.8 0.5"/>
+                  <geom material="BlackAbs" class="spot_arm_visual" type="capsule" pos="0.006354 -0.013993 -0.000009" quat="0.709554 -0.607010 -0.357870 0.000000" size="0.038671 0.015607" rgba="0.2 0.2 0.8 0.5"/>
+                  <geom class="spot_arm_collision" type="capsule" pos="0.004394 -0.009896 0.000032" quat="0.708548 0.260861 0.655676 0.000000" size="0.040005 0.015874" rgba="0.2 0.2 0.8 0.5"/>
                   <body name="arm_link_wr1">
-                    <inertial pos="0.125168 0.000101374 -0.013998" quat="1 1 1 1" mass="0.785"
-                      diaginertia="0.00176281 0.00168181 0.000767414"/>
+                    <inertial pos="0.125168 0.000101374 -0.013998" quat="1 1 1 1" mass="0.785" diaginertia="0.00176281 0.00168181 0.000767414"/>
                     <joint name="arm_wr1" axis="1 0 0" range="-2.87979 2.87979"/>
-                    <!--Start of right_hand-->
                     <body name="right_hand" pos="0.0 0.0 0.0" quat="1 0 0 0">
-                        <camera mode="fixed" name="right_eye_in_hand" pos="0.05 0 0" quat="0.5 0.5 -0.5 -0.5" fovy="75"/>
+                      <camera mode="fixed" name="right_eye_in_hand" pos="0.05 0 0" quat="0.5 0.5 -0.5 -0.5" fovy="75"/>
                     </body>
                   </body>
                 </body>
@@ -106,7 +94,6 @@
       </body>
     </body>
   </worldbody>
-
   <actuator>
     <motor class="spot_arm" name="arm_sh0" joint="arm_sh0"/>
     <motor class="spot_arm" name="arm_sh1" joint="arm_sh1"/>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="null_mobile_base">
+    <actuator>
+		
+			</actuator>
+    <worldbody>
+        <body name="support" pos="0 0 0">
+            
+            <inertial pos="-0.0508888 0.000109183 -0.0455794" quat="0.706855 0.707166 0.0123661 -0.0109307" mass="6.45117" diaginertia="0.0149302 0.0127972 0.00640923" />
+
+            <site name="center" type="sphere" pos="0 0 0" size="0.01" group="1" rgba="0 0 0 0" />
+
+        </body>
+    </worldbody>
+</mujoco>

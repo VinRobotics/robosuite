@@ -5,7 +5,7 @@
   <worldbody>
     <body>
       <body name="object">
-        <geom pos="0 0 0" mesh="bread_mesh" type="mesh" rgba="0.8 0.8 0.8 0.3"  conaffinity="0" contype="0"  group="1" mass="0.0001"/>
+        <geom pos="0.000000 0.000408 0.000331" type="capsule" rgba="0.2 0.2 0.8 0.5" conaffinity="0" contype="0" group="1" mass="0.0001" quat="0.921662 -0.387994 0.000000 0.000000" size="0.024744 0.006334"/>
       </body>
       <site rgba="0 0 0 0" size="0.005" pos="0 0 -0.045" name="bottom_site"/>
       <site rgba="0 0 0 0" size="0.005" pos="0 0 0.03" name="top_site"/>

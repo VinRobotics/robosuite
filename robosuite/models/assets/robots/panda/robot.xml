@@ -1,8 +1,6 @@
-<?xml version="1.0" ?>
 <mujoco model="panda">
   <compiler angle="radian"/>
   <actuator>
-    <!-- Physical limits of the actuator. -->
     <motor ctrllimited="true" ctrlrange="-80.0 80.0" joint="joint1" name="torq_j1"/>
     <motor ctrllimited="true" ctrlrange="-80.0 80.0" joint="joint2" name="torq_j2"/>
     <motor ctrllimited="true" ctrlrange="-80.0 80.0" joint="joint3" name="torq_j3"/>
@@ -20,7 +18,6 @@
     <mesh name="link5" file="meshes/link5.stl"/>
     <mesh name="link6" file="meshes/link6.stl"/>
     <mesh name="link7" file="meshes/link7.stl"/>
-    <!-- link 0 material and mesh -->
     <material name="Face636_001" specular="0.5" shininess="0.45" rgba="0.901961 0.921569 0.929412 1.000000"/>
     <material name="Part__Feature017_001" specular="0.5" shininess="0.45" rgba="1.000000 1.000000 1.000000 1.000000"/>
     <material name="Part__Feature018_001" specular="0.5" shininess="0.45" rgba="1.000000 1.000000 1.000000 1.000000"/>
@@ -45,13 +42,10 @@
     <mesh name="link0_vis_9" file="obj_meshes/link0_vis/link0_vis_9.obj"/>
     <mesh name="link0_vis_10" file="obj_meshes/link0_vis/link0_vis_10.obj"/>
     <mesh name="link0_vis_11" file="obj_meshes/link0_vis/link0_vis_11.obj"/>
-    <!-- link 1 material and mesh -->
     <material name="Part__Feature_001" specular="0.5" shininess="0.45" rgba="1.000000 1.000000 1.000000 1.000000"/>
     <mesh name="link1_vis" file="obj_meshes/link1_vis/link1_vis.obj"/>
-    <!-- link 2 material and mesh -->
     <material name="Part__Feature024" specular="0.5" shininess="0.45" rgba="1.000000 1.000000 1.000000 1.000000"/>
     <mesh name="link2_vis" file="obj_meshes/link2_vis/link2_vis.obj"/>
-    <!-- link 3 material and mesh -->
     <material name="Part__Feature001_010_001_002" specular="0.5" shininess="0.45" rgba="1.000000 1.000000 1.000000 1.000000"/>
     <material name="Part__Feature002_007_001_002" specular="0.5" shininess="0.45" rgba="1.000000 1.000000 1.000000 1.000000"/>
     <material name="Part__Feature003_004_001_002" specular="0.5" shininess="0.45" rgba="1.000000 1.000000 1.000000 1.000000"/>
@@ -60,7 +54,6 @@
     <mesh name="link3_vis_1" file="obj_meshes/link3_vis/link3_vis_1.obj"/>
     <mesh name="link3_vis_2" file="obj_meshes/link3_vis/link3_vis_2.obj"/>
     <mesh name="link3_vis_3" file="obj_meshes/link3_vis/link3_vis_3.obj"/>
-    <!-- link 4 material and mesh -->
     <material name="Part__Feature001_001_003_001" specular="0.5" shininess="0.45" rgba="1.000000 1.000000 1.000000 1.000000"/>
     <material name="Part__Feature002_001_003_001" specular="0.5" shininess="0.45" rgba="0.250980 0.250980 0.250980 1.000000"/>
     <material name="Part__Feature003_001_003_001" specular="0.5" shininess="0.45" rgba="1.000000 1.000000 1.000000 1.000000"/>
@@ -69,14 +62,12 @@
     <mesh name="link4_vis_1" file="obj_meshes/link4_vis/link4_vis_1.obj"/>
     <mesh name="link4_vis_2" file="obj_meshes/link4_vis/link4_vis_2.obj"/>
     <mesh name="link4_vis_3" file="obj_meshes/link4_vis/link4_vis_3.obj"/>
-    <!-- link 5 material and mesh -->
     <material name="Part__Feature_002_004_003" specular="0.5" shininess="0.45" rgba="1.000000 1.000000 1.000000 1.000000"/>
     <material name="Shell001_001_001_003" specular="0.5" shininess="0.45" rgba="0.250000 0.250000 0.250000 1.000000"/>
     <material name="Shell_001_001_003" specular="0.5" shininess="0.45" rgba="1.000000 1.000000 1.000000 1.000000"/>
     <mesh name="link5_vis_0" file="obj_meshes/link5_vis/link5_vis_0.obj"/>
     <mesh name="link5_vis_1" file="obj_meshes/link5_vis/link5_vis_1.obj"/>
     <mesh name="link5_vis_2" file="obj_meshes/link5_vis/link5_vis_2.obj"/>
-    <!-- link 6 material and mesh -->
     <material name="Face064_002_001_002_001" specular="0.5" shininess="0.45" rgba="1.000000 0.000000 0.000000 1.000000"/>
     <material name="Face065_002_001_002_001" specular="0.5" shininess="0.45" rgba="0.000000 1.000000 0.000000 1.000000"/>
     <material name="Face374_002_001_002_001" specular="0.5" shininess="0.45" rgba="1.000000 1.000000 1.000000 1.000000"/>
@@ -111,7 +102,6 @@
     <mesh name="link6_vis_14" file="obj_meshes/link6_vis/link6_vis_14.obj"/>
     <mesh name="link6_vis_15" file="obj_meshes/link6_vis/link6_vis_15.obj"/>
     <mesh name="link6_vis_16" file="obj_meshes/link6_vis/link6_vis_16.obj"/>
-    <!-- link 7 material and mesh -->
     <material name="Part__Mirroring001_004_002" specular="0.5" shininess="0.45" rgba="0.250980 0.250980 0.250980 1.000000"/>
     <material name="Part__Mirroring002_004_001" specular="0.5" shininess="0.45" rgba="0.250980 0.250980 0.250980 1.000000"/>
     <material name="Part__Mirroring003_004_001" specular="0.5" shininess="0.45" rgba="0.250980 0.250980 0.250980 1.000000"/>
@@ -131,10 +121,8 @@
   </asset>
   <worldbody>
     <body name="base" pos="0 0 0">
-      <!-- robot view -->
       <camera mode="fixed" name="robotview" pos="1.0 0 0.4" quat="0.653 0.271 0.271 0.653"/>
       <inertial diaginertia="0 0 0" mass="0" pos="0 0 0"/>
-      <!-- mount attached here -->
       <body name="link0" pos="0 0 0">
         <site name="right_center" pos="0 0 0" size="0.01" rgba="1 0.3 0.3 1" group="2"/>
         <inertial pos="0 0 0.05" mass="4" diaginertia="0.4 0.4 0.4"/>
@@ -150,17 +138,17 @@
         <geom mesh="link0_vis_9" material="Part__Feature023_001" type="mesh" contype="0" conaffinity="0" group="1"/>
         <geom mesh="link0_vis_10" material="Part__Feature022_001" type="mesh" contype="0" conaffinity="0" group="1"/>
         <geom mesh="link0_vis_11" material="Part__Feature017_001" type="mesh" contype="0" conaffinity="0" group="1"/>
-        <geom type="mesh" group="0" mesh="link0" name="link0_collision"/>
+        <geom type="capsule" group="0" name="link0_collision" pos="-0.045906 -0.007440 0.051196" quat="0.680215 0.326181 -0.656440 0.000000" size="0.077880 0.034114" rgba="0.2 0.2 0.8 0.5"/>
         <body name="link1" pos="0 0 0.333">
           <inertial pos="0 0 -0.07" mass="3" diaginertia="0.3 0.3 0.3"/>
           <joint name="joint1" pos="0 0 0" axis="0 0 1" limited="true" range="-2.8973 2.8973" damping="0.1"/>
           <geom material="Part__Feature_001" mesh="link1_vis" type="mesh" contype="0" conaffinity="0" group="1"/>
-          <geom type="mesh" group="0" mesh="link1" name="link1_collision"/>
+          <geom type="capsule" group="0" name="link1_collision" pos="-0.002260 -0.027247 -0.073937" quat="0.399636 -0.715074 -0.573551 0.000000" size="0.051364 0.083821" rgba="0.2 0.2 0.8 0.5"/>
           <body name="link2" pos="0 0 0" quat="0.707107 -0.707107 0 0">
             <inertial pos="0 -0.1 0" mass="3" diaginertia="0.3 0.3 0.3"/>
             <joint name="joint2" pos="0 0 0" axis="0 0 1" limited="true" range="-1.7628 1.7628" damping="0.1"/>
             <geom material="Part__Feature024" mesh="link2_vis" type="mesh" contype="0" conaffinity="0" group="1"/>
-            <geom type="mesh" group="0" mesh="link2" name="link2_collision"/>
+            <geom type="capsule" group="0" name="link2_collision" pos="-0.000008 -0.075296 0.028328" quat="0.470564 0.882366 0.000593 0.000000" size="0.046872 0.098180" rgba="0.2 0.2 0.8 0.5"/>
             <body name="link3" pos="0 -0.316 0" quat="0.707107 0.707107 0 0">
               <inertial pos="0.04 0 -0.05" mass="2" diaginertia="0.2 0.2 0.2"/>
               <joint name="joint3" pos="0 0 0" axis="0 0 1" limited="true" range="-2.8973 2.8973" damping="0.1"/>
@@ -168,7 +156,7 @@
               <geom mesh="link3_vis_1" material="Part__Feature002_007_001_002" type="mesh" contype="0" conaffinity="0" group="1"/>
               <geom mesh="link3_vis_2" material="Part__Feature001_010_001_002" type="mesh" contype="0" conaffinity="0" group="1"/>
               <geom mesh="link3_vis_3" material="Part__Feature_001_001_001_002" type="mesh" contype="0" conaffinity="0" group="1"/>
-              <geom type="mesh" group="0" mesh="link3" name="link3_collision"/>
+              <geom type="capsule" group="0" name="link3_collision" pos="0.040259 0.021475 -0.041876" quat="0.493642 0.533369 -0.686903 0.000000" size="0.047633 0.078781" rgba="0.2 0.2 0.8 0.5"/>
               <body name="link4" pos="0.0825 0 0" quat="0.707107 0.707107 0 0">
                 <inertial pos="-0.04 0.05 0" mass="2" diaginertia="0.2 0.2 0.2"/>
                 <joint name="joint4" pos="0 0 0" axis="0 0 1" limited="true" range="-3.0718 -0.0698" damping="0.1"/>
@@ -176,14 +164,14 @@
                 <geom mesh="link4_vis_1" material="Part__Feature003_001_003_001" type="mesh" contype="0" conaffinity="0" group="1"/>
                 <geom mesh="link4_vis_2" material="Part__Feature002_001_003_001" type="mesh" contype="0" conaffinity="0" group="1"/>
                 <geom mesh="link4_vis_3" material="Part__Feature_002_003_001" type="mesh" contype="0" conaffinity="0" group="1"/>
-                <geom type="mesh" group="0" mesh="link4" name="link4_collision"/>
+                <geom type="capsule" group="0" name="link4_collision" pos="-0.042357 0.043139 0.021519" quat="0.491500 -0.533817 -0.688089 0.000000" size="0.047910 0.079688" rgba="0.2 0.2 0.8 0.5"/>
                 <body name="link5" pos="-0.0825 0.384 0" quat="0.707107 -0.707107 0 0">
                   <inertial pos="0 0 -0.15" mass="2" diaginertia="0.2 0.2 0.2"/>
                   <joint name="joint5" pos="0 0 0" axis="0 0 1" limited="true" range="-2.8973 2.8973" damping="0.1"/>
                   <geom mesh="link5_vis_0" material="Shell001_001_001_003" type="mesh" contype="0" conaffinity="0" group="1"/>
                   <geom mesh="link5_vis_1" material="Shell_001_001_003" type="mesh" contype="0" conaffinity="0" group="1"/>
                   <geom mesh="link5_vis_2" material="Part__Feature_002_004_003" type="mesh" contype="0" conaffinity="0" group="1"/>
-                  <geom type="mesh" group="0" mesh="link5" name="link5_collision"/>
+                  <geom type="capsule" group="0" name="link5_collision" pos="-0.000036 0.037459 -0.111048" quat="0.219772 0.975325 -0.021031 0.000000" size="0.045813 0.127463" rgba="0.2 0.2 0.8 0.5"/>
                   <body name="link6" pos="0 0 0" quat="0.707107 0.707107 0 0">
                     <inertial pos="0.06 0 0" mass="1.5" diaginertia="0.1 0.1 0.1"/>
                     <joint name="joint6" pos="0 0 0" axis="0 0 1" limited="true" range="-0.0175 3.7525" damping="0.01"/>
@@ -204,7 +192,7 @@
                     <geom mesh="link6_vis_14" material="Part__Feature002_006_001_002_001" type="mesh" contype="0" conaffinity="0" group="1"/>
                     <geom mesh="link6_vis_15" material="Part__Feature001_009_001_002_001" type="mesh" contype="0" conaffinity="0" group="1"/>
                     <geom mesh="link6_vis_16" material="Shell012_002_002_001" type="mesh" contype="0" conaffinity="0" group="1"/>
-                    <geom type="mesh" group="0" mesh="link6" name="link6_collision"/>
+                    <geom type="capsule" group="0" name="link6_collision" pos="0.053170 0.008966 0.005066" quat="0.671114 -0.601582 0.433249 0.000000" size="0.053876 0.033139" rgba="0.2 0.2 0.8 0.5"/>
                     <body name="link7" pos="0.088 0 0" quat="0.707107 0.707107 0 0">
                       <inertial pos="0 0 0.08" mass="0.5" diaginertia="0.05 0.05 0.05"/>
                       <joint name="joint7" pos="0 0 0" axis="0 0 1" limited="true" range="-2.8973 2.8973" damping="0.01"/>
@@ -216,13 +204,10 @@
                       <geom mesh="link7_vis_5" material="Part__Mirroring003_004_001" type="mesh" contype="0" conaffinity="0" group="1"/>
                       <geom mesh="link7_vis_6" material="Part__Mirroring002_004_001" type="mesh" contype="0" conaffinity="0" group="1"/>
                       <geom mesh="link7_vis_7" material="Part__Mirroring_004_001" type="mesh" contype="0" conaffinity="0" group="1"/>
-                      <!-- rotate 135deg to align physically to the tool-->
-                      <geom type="mesh" group="0" mesh="link7" name="link7_collision"/>
+                      <geom type="capsule" group="0" name="link7_collision" pos="0.017035 0.013198 0.079160" quat="0.728512 -0.214639 0.650538 0.000000" size="0.036687 0.032937" rgba="0.2 0.2 0.8 0.5"/>
                       <body name="right_hand" pos="0 0 0.1065" quat="0.924 0 0 -0.383">
                         <inertial pos="0 0 0" mass="0.5" diaginertia="0.05 0.05 0.05"/>
-                        <!-- This camera points out from the eef. -->
                         <camera mode="fixed" name="eye_in_hand" pos="0.05 0 0" quat="0 0.707108 0.707108 0" fovy="75"/>
-                        <!-- to add gripper -->
                       </body>
                     </body>
                   </body>
