@@ -70,5 +70,10 @@
     <camera mode="fixed" name="birdview" pos="-0.2 0 3.0" quat="0.7071 0 0 0.7071"/>
     <!-- agent view -->
     <camera mode="fixed" name="agentview" pos="1.0 0 1.75" quat="0.653 0.271 0.271 0.653"/>
+    <!-- RVT view -->
+    <camera name="ortho_rightview" pos="0.0 1.2 1.1" xyaxes="-1.0 0.0 0.0 0.0 0.0 1.0"/>
+    <camera name="ortho_frontview" pos="1.2 0.0 1.1" xyaxes="0.0 1.0 0.0 0.0 0.0 1.0"/>
+    <camera name="ortho_leftview" pos="0.0 -1.2 1.1" xyaxes="1.0 0.0 0.0 0.0 0.0 1.0"/>
+    <camera name="ortho_topview" pos="0.0 0.0 1.8" xyaxes="0.0 1.0 0.0 -1.0 0.0 0.0"/>
   </worldbody>
 </mujoco>
